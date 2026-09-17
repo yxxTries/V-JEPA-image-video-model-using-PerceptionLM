@@ -2,7 +2,24 @@
 
 A small image/video captioning model built with the LLaVA / PerceptionLM recipe. The vision encoder and the LLM stay frozen; only a small MLP projector is trained to translate video features into word embeddings.
 
-## Which models (as of Sept 2026)
+## How it works
+
+image / video
+  │  resize short side to 438, center-crop 384×384, ImageNet normalize
+  ▼
+V-JEPA 2.1 ViT-L (frozen, fp16)      image → 576 tokens × 1024     16-frame clip → 4608 tokens × 1024
+  │  average over time (videos), 2×2 average pool 24×24 → 12×12
+  ▼
+144 tokens × 1024
+  │
+  ▼
+MLP projector (trained)              Linear 1024→1536 → GELU → Linear 1536→1536
+  │
+  ▼
+144 tokens × 1536, placed inside Qwen's chat prompt:
+  <|im_start|>system …<|im_end|> <|im_start|>user [144 image tokens] Describe this image.<|im_end|> <|im_start|>assistant
+  ▼
+Qwen2.5-1.5B-Instruct (frozen, fp16) → caption 
 
 | Release | Date | What's used here |
 |---|---|---|

@@ -1,0 +1,13 @@
+2026-09-16 16:38:45  start
+2026-09-16 16:52:56  llava_prep.py --threads 32  ->  exit 0, 14.2 min
+2026-09-16 17:18:36  start
+2026-09-16 17:18:36  restart: training again with the VRAM fix
+2026-09-16 17:25:10  start
+2026-09-16 17:25:10  restart: training again with the VRAM fix
+2026-09-16 17:53:03  train_projector.py  ->  exit 0, 27.9 min
+2026-09-16 17:53:36  caption.py C:\Users\amils\OneDrive\Desktop\jepa\clips\archery.mp4 --video clip  ->  exit 0, 0.5 min
+2026-09-16 17:54:00  caption.py C:\Users\amils\OneDrive\Desktop\jepa\clips\archery.mp4 --video frames  ->  exit 0, 0.4 min
+2026-09-16 17:54:28  caption.py C:\Users\amils\OneDrive\Desktop\jepa\clips\bowling.mp4 --video clip  ->  exit 0, 0.5 min
+2026-09-16 17:54:53  caption.py C:\Users\amils\OneDrive\Desktop\jepa\clips\bowling.mp4 --video frames  ->  exit 0, 0.4 min
+2026-09-16 17:54:53  done
+held-out image captions done

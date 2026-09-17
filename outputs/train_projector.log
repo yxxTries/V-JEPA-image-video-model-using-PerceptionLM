@@ -1,0 +1,45 @@
+[data]   feats_vjepa2.1-vitl-384_g12.npy: (20000, 144, 1024) float16 (N, tokens, D) memmap; training on 20,000 samples
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   8%|▊         | 28/338 [00:00<00:01, 269.84it/s]Loading weights:  16%|█▋        | 55/338 [00:00<00:02, 140.30it/s]Loading weights:  22%|██▏       | 73/338 [00:00<00:01, 151.22it/s]Loading weights:  27%|██▋       | 91/338 [00:00<00:01, 144.04it/s]Loading weights:  32%|███▏      | 107/338 [00:00<00:01, 131.01it/s]Loading weights:  37%|███▋      | 124/338 [00:00<00:01, 136.88it/s]Loading weights:  42%|████▏     | 142/338 [00:00<00:01, 139.99it/s]Loading weights:  46%|████▋     | 157/338 [00:01<00:01, 126.53it/s]Loading weights:  51%|█████     | 173/338 [00:01<00:01, 132.51it/s]Loading weights:  56%|█████▌    | 189/338 [00:01<00:01, 125.00it/s]Loading weights:  60%|██████    | 203/338 [00:01<00:01, 121.24it/s]Loading weights:  65%|██████▌   | 220/338 [00:01<00:00, 130.29it/s]Loading weights:  69%|██████▉   | 234/338 [00:01<00:00, 118.29it/s]Loading weights:  74%|███████▍  | 250/338 [00:01<00:00, 121.67it/s]Loading weights:  78%|███████▊  | 263/338 [00:02<00:00, 119.89it/s]Loading weights:  83%|████████▎ | 280/338 [00:02<00:00, 127.94it/s]Loading weights:  87%|████████▋ | 293/338 [00:02<00:00, 126.18it/s]Loading weights:  91%|█████████ | 306/338 [00:02<00:00, 125.26it/s]Loading weights:  94%|█████████▍| 319/338 [00:02<00:00, 110.57it/s]Loading weights: 100%|██████████| 338/338 [00:02<00:00, 133.03it/s]
+[llm]    Qwen/Qwen2.5-1.5B-Instruct: 1.54B params frozen, hidden 1536, float16 on cuda (12s)
+[seq]    24 prompt + 144 image + 10 prompt tokens + caption (mean 13.0, max 41 incl. <|im_end|>, padded to 48)
+[proj]   3.94M trainable params | 625 steps x batch 4x8=32 | lr 0.001, 19 warmup steps
+[shapes] feats (4, 144, 1024) -> projector (4, 144, 1536) -> inputs_embeds (4, 226, 1536), targets (4, 48) (54 caption tokens) -> loss 6.076
+[scale]  rms: image tokens 0.366 vs text embeddings 0.026
+[step    1/625] loss 6.286  lr 5.3e-05  |grad| 13.86  8.8 samples/s  peak 5.09 GiB alloc / 5.41 GiB reserved  0.1 min, ETA 37.8 min
+[vram]   0.50 GiB of 7.96 GiB still free on the GPU (Windows silently spills into slow shared RAM when this hits 0 -- lower --micro-batch then)
+[step   25/625] loss 5.166  lr 1.0e-03  |grad| 2.49  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  1.1 min, ETA 26.3 min
+[step   50/625] loss 4.451  lr 9.9e-04  |grad| 0.65  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  2.2 min, ETA 25.2 min
+[step   75/625] loss 4.353  lr 9.8e-04  |grad| 0.68  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  3.3 min, ETA 23.9 min
+[step  100/625] loss 4.229  lr 9.6e-04  |grad| 0.72  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  4.3 min, ETA 22.7 min
+[step  125/625] loss 4.098  lr 9.3e-04  |grad| 0.64  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  5.4 min, ETA 21.7 min
+[step  150/625] loss 4.099  lr 8.9e-04  |grad| 0.60  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  6.5 min, ETA 20.6 min
+[step  175/625] loss 4.042  lr 8.5e-04  |grad| 0.63  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  7.6 min, ETA 19.6 min
+[step  200/625] loss 4.101  lr 8.0e-04  |grad| 0.69  12.3 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  8.7 min, ETA 18.5 min
+[step  225/625] loss 3.993  lr 7.4e-04  |grad| 0.66  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  9.8 min, ETA 17.4 min
+[step  250/625] loss 3.980  lr 6.8e-04  |grad| 0.71  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  10.9 min, ETA 16.3 min
+[step  275/625] loss 3.943  lr 6.2e-04  |grad| 0.61  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  12.0 min, ETA 15.3 min
+[step  300/625] loss 3.927  lr 5.6e-04  |grad| 0.59  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  13.1 min, ETA 14.2 min
+[step  325/625] loss 3.951  lr 4.9e-04  |grad| 0.62  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  14.2 min, ETA 13.1 min
+[step  350/625] loss 3.896  lr 4.3e-04  |grad| 0.60  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  15.3 min, ETA 12.0 min
+[step  375/625] loss 3.907  lr 3.7e-04  |grad| 0.61  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  16.4 min, ETA 10.9 min
+[step  400/625] loss 3.933  lr 3.1e-04  |grad| 0.64  12.2 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  17.5 min, ETA 9.9 min
+[step  425/625] loss 3.841  lr 2.5e-04  |grad| 0.61  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  18.7 min, ETA 8.8 min
+[step  450/625] loss 3.846  lr 1.9e-04  |grad| 0.52  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  19.8 min, ETA 7.7 min
+[step  475/625] loss 3.810  lr 1.5e-04  |grad| 0.66  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  21.0 min, ETA 6.6 min
+[step  500/625] loss 3.801  lr 1.0e-04  |grad| 0.64  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  22.1 min, ETA 5.5 min
+[step  525/625] loss 3.813  lr 6.7e-05  |grad| 0.66  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  23.2 min, ETA 4.4 min
+[step  550/625] loss 3.818  lr 3.8e-05  |grad| 0.65  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  24.3 min, ETA 3.3 min
+[step  575/625] loss 3.828  lr 1.7e-05  |grad| 0.73  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  25.4 min, ETA 2.2 min
+[step  600/625] loss 3.835  lr 4.5e-06  |grad| 0.72  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  26.5 min, ETA 1.1 min
+[step  625/625] loss 3.757  lr 6.7e-09  |grad| 0.65  12.1 samples/s  peak 5.12 GiB alloc / 5.41 GiB reserved  27.6 min, ETA 0.0 min
+[done]   625 steps, 20,000 samples in 27.6 min | loss 6.286 -> 3.796 (mean of last 50 steps) | peak 5.12 GiB alloc / 5.41 GiB reserved
+[saved]  C:\Users\amils\OneDrive\Desktop\jepa\outputs\projector_g12.pt (15.0 MiB) + projector_g12_loss.csv
+[sample] 00179/001790761.jpg
+           BLIP: a white corvette parked in front of a parking lot
+           ours: the 2018 ford f-150 pickup truck
+[sample] 00218/002183631.jpg
+           BLIP: polished brass switch plate
+           ours: a 10 watt led light fixture
+[sample] 00531/005316820.jpg
+           BLIP: a man in black technical wool trouser pants with white tipping and back print
+           ours: the men's black leather jacket

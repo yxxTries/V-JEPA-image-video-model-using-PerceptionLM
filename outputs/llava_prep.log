@@ -1,0 +1,44 @@
+[note]   C:\Users\amils\OneDrive\Desktop\jepa\data\llava20k is inside OneDrive, which will try to sync the multi-GB cache. --data C:\jepa_data keeps it local.
+[data]   liuhaotian/LLaVA-Pretrain: 558,128 captions, images.zip = 25.5 GiB / 558,128 files (index read in 9s)
+[data]   downloading 20,000 of 20,000 JPEGs (948 MiB) with 32 threads -> C:\Users\amils\OneDrive\Desktop\jepa\data\llava20k\images
+[data]   2,000/20,000  95 img/s  0 failed
+[data]   4,000/20,000  109 img/s  0 failed
+[data]   6,000/20,000  115 img/s  0 failed
+[data]   8,000/20,000  120 img/s  0 failed
+[data]   10,000/20,000  123 img/s  0 failed
+[data]   12,000/20,000  125 img/s  0 failed
+[data]   14,000/20,000  127 img/s  0 failed
+[data]   16,000/20,000  128 img/s  0 failed
+[data]   18,000/20,000  129 img/s  0 failed
+[data]   20,000/20,000  130 img/s  0 failed
+[data]   20,000 image-caption pairs -> C:\Users\amils\OneDrive\Desktop\jepa\data\llava20k\samples.json  (e.g. 00217/002170933.jpg: "a knee walker with wheels and a basket is shown")
+[load] vjepa2.1-vitl-384: checkpoint https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt (downloads once, then cached)
+[load] vjepa2.1-vitl-384: 305M params, 24 blocks, dim 1024, float16 on cuda (9.9s)
+[cache]  C:\Users\amils\OneDrive\Desktop\jepa\data\llava20k\feats_vjepa2.1-vitl-384_g12.npy (20000, 144, 1024) float16 (N, tokens, D) = 5.49 GiB, starting at row 0
+[shapes] input (32, 3, 1, 384, 384) (B,C,T,H,W) -> tokens (32, 576, 1024) (B, 1x24x24, D) -> pooled (32, 144, 1024) (B, 12x12, D)
+[cache]  800/20,000  23 img/s  ETA 14.1 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  1,600/20,000  26 img/s  ETA 11.6 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  2,400/20,000  28 img/s  ETA 10.6 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  3,200/20,000  29 img/s  ETA 9.8 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  4,000/20,000  29 img/s  ETA 9.2 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  4,800/20,000  30 img/s  ETA 8.6 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  5,600/20,000  30 img/s  ETA 8.0 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  6,400/20,000  30 img/s  ETA 7.5 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  7,200/20,000  30 img/s  ETA 7.1 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  8,000/20,000  30 img/s  ETA 6.6 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  8,800/20,000  31 img/s  ETA 6.1 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  9,600/20,000  31 img/s  ETA 5.7 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  10,400/20,000  31 img/s  ETA 5.2 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  11,200/20,000  31 img/s  ETA 4.8 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  12,000/20,000  31 img/s  ETA 4.4 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  12,800/20,000  30 img/s  ETA 3.9 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  13,600/20,000  30 img/s  ETA 3.5 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  14,400/20,000  30 img/s  ETA 3.1 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  15,200/20,000  30 img/s  ETA 2.6 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  16,000/20,000  30 img/s  ETA 2.2 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  16,800/20,000  30 img/s  ETA 1.8 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  17,600/20,000  30 img/s  ETA 1.3 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  18,400/20,000  30 img/s  ETA 0.9 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  19,200/20,000  30 img/s  ETA 0.4 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[cache]  20,000/20,000  30 img/s  ETA 0.0 min  peak 1.38 GiB alloc / 1.76 GiB reserved
+[done]   encoded 20,000 images in 11.2 min -> C:\Users\amils\OneDrive\Desktop\jepa\data\llava20k\feats_vjepa2.1-vitl-384_g12.npy

@@ -1,4 +1,4 @@
-# JEPA bench
+# JEPA bench because I love jepa models
 
 A small research playground for **V-JEPA 2.1**, Meta's self-supervised video model. It has two halves:
 
